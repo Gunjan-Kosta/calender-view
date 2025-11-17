@@ -2,9 +2,6 @@
 
 A sophisticated, fully functional calendar component for date and event management, built with React, TypeScript, and Tailwind CSS. It features month, week, and agenda views, drag-and-drop event handling, and is designed to be responsive and accessible.
 
-## 🚀 Live Storybook
-
-[View the interactive Storybook deployment here.](https://storybook.js.org/showcase)
 
 ## 📦 Installation
 
@@ -16,6 +13,27 @@ npm install
 
 # Run the Storybook development server
 npm run storybook
+```
+## 🚀 Storybook Stories
+
+The project includes comprehensive Storybook stories for all calendar components. To view them locally:
+
+```bash
+npm run storybook
+```
+
+This starts the Storybook dev server at `http://localhost:6006`.
+
+## 📦 Installation
+
+This project uses `npm` for package management.
+
+```bash
+# Install dependencies
+npm install
+
+# Build the production bundle
+npm run build
 ```
 
 ## 🏗️ Architecture
