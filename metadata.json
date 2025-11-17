@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Calendar View",
+  "description": "A sophisticated, fully functional calendar component for date and event management, built with React, TypeScript, and Tailwind CSS. It features month and week views, drag-and-drop event handling, and is designed to be responsive and accessible.",
+  "requestFramePermissions": []
+}
