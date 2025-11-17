@@ -1,8 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { CalendarView } from './CalendarView';
-import { CalendarEvent } from '../../types';
 
-const meta: Meta<typeof CalendarView> = {
+const meta = {
   title: 'Components/CalendarView',
   component: CalendarView,
   parameters: {
@@ -24,11 +22,10 @@ const meta: Meta<typeof CalendarView> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof CalendarView>;
 
 // --- Sample Data ---
 const today = new Date();
-const sampleEvents: CalendarEvent[] = [
+const sampleEvents = [
   {
     id: 'evt-1',
     title: 'Team Standup',
@@ -66,8 +63,8 @@ const sampleEvents: CalendarEvent[] = [
 ];
 
 
-const generateLargeDataset = (numEvents: number): CalendarEvent[] => {
-    const events: CalendarEvent[] = [];
+const generateLargeDataset = (numEvents) => {
+    const events = [];
     const colors = ['#2563eb', '#047857', '#d97706', '#7c3aed', '#dc2626', '#be185d'];
     const titles = ['Sync', 'Planning', 'Review', 'Meeting', 'Workshop', 'Demo'];
     const currentMonth = today.getMonth();
@@ -94,7 +91,7 @@ const generateLargeDataset = (numEvents: number): CalendarEvent[] => {
 
 // --- Stories ---
 
-export const Default: Story = {
+export const Default = {
   name: "Default (Current Month)",
   args: {
     events: sampleEvents,
@@ -102,7 +99,7 @@ export const Default: Story = {
   },
 };
 
-export const Empty: Story = {
+export const Empty = {
   name: "Empty Calendar",
   args: {
     events: [],
@@ -110,7 +107,7 @@ export const Empty: Story = {
   },
 };
 
-export const WeekView: Story = {
+export const WeekView = {
   name: "Week View",
   args: {
     ...Default.args,
@@ -118,7 +115,7 @@ export const WeekView: Story = {
   },
 };
 
-export const LargeDataset: Story = {
+export const LargeDataset = {
   name: "Large Dataset (50+ Events)",
   args: {
     events: generateLargeDataset(50),
@@ -126,7 +123,7 @@ export const LargeDataset: Story = {
   },
 };
 
-export const InteractivePlayground: Story = {
+export const InteractivePlayground = {
   name: "Interactive Playground",
   args: {
     events: sampleEvents,
